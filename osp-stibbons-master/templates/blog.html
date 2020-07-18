@@ -1,0 +1,92 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block content %}
+
+    <!-- banner -->
+<div class="inside-banner">
+  <div class="container">
+    <span class="pull-right"><a href="#">Home</a> / Refer and Earn</span>
+    <h2>Refer A Friend</h2>
+</div>
+</div>
+<!-- banner -->
+
+
+<div class="container">
+<div class="spacer blog">
+<div class="row">
+  <div class="col-lg-8 col-sm-12 ">
+
+  <!-- blog list -->
+  <div class="row">
+                            <div class="col-lg-4 col-sm-4 "><a href="blogdetail.php" class="thumbnail"><img src="static/images/blog/ref.png" alt="blog title"></a></div>
+                            <div class="col-lg-8 col-sm-8 ">
+                            <h3><a href="blogdetail.php">Download Fisbo App</a></h3>
+                            <div class="info">Posted on: Jan 20, 2020</div>
+                            <p>Refer a Friend to fisbo. Ask him/Her to download Fisbo App, And earn $200</p>
+                            <a href="blogdetail.php" class="more">Read More</a>
+                            </div>
+  </div>
+  <!-- blog list -->
+  <!-- badge list -->
+  <div class="row">
+  <div class="col-lg-4 col-sm-4">
+    <ul class="price">
+      <li class="header">Basic</li>
+      <li class="grey">$ 199.99 / year</li>
+      <li>1 Site Inspection</li>
+      <li>1 Documentation</li>
+      <li>Reccomendations</li>
+      <li>1 Day Social Media Campaign</li>
+      <li class="grey"><a href="{% url 'login' %}" class="button">Sign Up</a></li>
+    </ul>
+  </div>
+
+  <!-- badge list -->
+  <div class="col-lg-4 col-sm-4">
+    <ul class="price">
+      <li class="header">Standard</li>
+      <li class="grey">$ 599.99 / year</li>
+      <li>Unlimited Site Inspection</li>
+      <li>10 Documentation</li>
+      <li>Reccomendations</li>
+      <li>1 Week Social Media Campaign</li>
+      <li class="grey"><a href="{% url 'login' %}" class="button">Sign Up</a></li>
+    </ul>
+  </div>
+
+
+  <!-- badge list -->
+
+  <!-- badge list -->
+  <div class="col-lg-4 col-sm-4">
+    <ul class="price">
+      <li class="header">Diamond</li>
+      <li class="grey">$ 999.99 / year</li>
+      <li>Unlimited Site Inspection</li>
+      <li>10 Documentation</li>
+      <li>Free App Download</li>
+      <li>1 Week Social Media Campaign</li>
+      <li class="grey"><a href="{% url 'login' %}" class="button">Sign Up</a></li>
+    </ul>
+  </div>
+
+</div>
+  <!-- badge list -->
+
+  <!-- tabs -->
+  
+  <!-- tabs -->
+
+  </div>
+</div>
+</div>
+</div>
+
+
+{% endblock %}
+
+
+

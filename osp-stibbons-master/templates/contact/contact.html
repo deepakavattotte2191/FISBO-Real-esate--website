@@ -1,0 +1,46 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block content %}
+
+<!-- banner -->
+<div class="inside-banner">
+  <div class="container">
+    <span class="pull-right"><a href="#">Home</a> / Contact Us</span>
+    <h2>Contact Us</h2>
+      {% if request.user.is_staff %}
+          <a href="{% url 'contact:question_list' %}">View all queries</a>
+      {% endif %}
+</div>
+</div>
+<!-- banner -->
+
+
+<div class="container">
+<div class="spacer">
+<div class="row contact">
+  <div class="col-lg-6 col-sm-6 ">
+
+      <form class="form" action="{% url 'contact:question_create' %}" method="post">
+            {% csrf_token %}
+            <input type="text" class="form-control" placeholder="Full Name" name="name">
+            <input type="text" class="form-control" placeholder="Email Address" name="email">
+            <input type="text" class="form-control" placeholder="Subject" name="subject">
+            <textarea rows="6" class="form-control" placeholder="Message" name="message"></textarea>
+            <button type="submit" class="btn btn-success" name="Submit">Send Message</button>
+      </form>
+  </div>
+  <div class="col-lg-6 col-sm-6 ">
+    <div class="well">
+        <iframe width="100%" height="300" frameborder="0" scrolling="no"
+                marginheight="0" marginwidth="0"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d197092.66792749346!2d176.72829474373225!3d-39.47897564535754!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6d69c9d64fb1ca99%3A0x500ef6143a2e850!2sNapier!5e0!3m2!1sen!2snz!4v1591058349481!5m2!1sen!2snz">
+        </iframe>
+    </div>
+  </div>
+</div>
+</div>
+</div>
+
+{% endblock %}
